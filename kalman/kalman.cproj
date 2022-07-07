@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>7.0</ProjectVersion>
+    <ToolchainName>com.microchip.xc8</ToolchainName>
+    <ProjectGuid>{7d6cd1f4-69a9-4002-ae7e-0c1464c1c041}</ProjectGuid>
+    <avrdevice>AVR64EA48</avrdevice>
+    <avrdeviceseries>none</avrdeviceseries>
+    <OutputType>Executable</OutputType>
+    <Language>C</Language>
+    <OutputFileName>$(MSBuildProjectName)</OutputFileName>
+    <OutputFileExtension>.elf</OutputFileExtension>
+    <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
+    <AssemblyName>kalman</AssemblyName>
+    <Name>kalman</Name>
+    <RootNamespace>kalman</RootNamespace>
+    <ToolchainFlavour>XC8_2.31</ToolchainFlavour>
+    <KeepTimersRunning>true</KeepTimersRunning>
+    <OverrideVtor>false</OverrideVtor>
+    <CacheFlash>true</CacheFlash>
+    <ProgFlashFromRam>true</ProgFlashFromRam>
+    <RamSnippetAddress />
+    <UncachedRange />
+    <preserveEEPROM>true</preserveEEPROM>
+    <OverrideVtorValue />
+    <BootSegment>2</BootSegment>
+    <ResetRule>0</ResetRule>
+    <eraseonlaunchrule>0</eraseonlaunchrule>
+    <EraseKey />
+    <AsfFrameworkConfig>
+      <framework-data xmlns="">
+        <options />
+        <configurations />
+        <files />
+        <documentation help="" />
+        <offline-documentation help="" />
+        <dependencies>
+          <content-extension eid="atmel.asf" uuidref="Atmel.ASF" version="3.51.0" />
+        </dependencies>
+      </framework-data>
+    </AsfFrameworkConfig>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <ToolchainSettings>
+      <com.microchip.xc8>
+        <com.microchip.xc8.common.optimization.RelaxBranches>True</com.microchip.xc8.common.optimization.RelaxBranches>
+        <com.microchip.xc8.compiler.general.ChangeDefaultCharTypeUnsigned>True</com.microchip.xc8.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <com.microchip.xc8.compiler.general.ChangeDefaultBitFieldUnsigned>True</com.microchip.xc8.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <com.microchip.xc8.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>(%24DeviceMacro)</Value>
+            <Value>NDEBUG</Value>
+          </ListValues>
+        </com.microchip.xc8.compiler.symbols.DefSymbols>
+        <com.microchip.xc8.compiler.optimization.level>Optimize for size (-Os)</com.microchip.xc8.compiler.optimization.level>
+        <com.microchip.xc8.compiler.optimization.PackStructureMembers>True</com.microchip.xc8.compiler.optimization.PackStructureMembers>
+        <com.microchip.xc8.compiler.optimization.AllocateBytesNeededForEnum>True</com.microchip.xc8.compiler.optimization.AllocateBytesNeededForEnum>
+        <com.microchip.xc8.compiler.warnings.AllWarnings>True</com.microchip.xc8.compiler.warnings.AllWarnings>
+        <com.microchip.xc8.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </com.microchip.xc8.linker.libraries.Libraries>
+      </com.microchip.xc8>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <ToolchainSettings>
+      <com.microchip.xc8>
+        <com.microchip.xc8.compiler.general.ChangeDefaultCharTypeUnsigned>True</com.microchip.xc8.compiler.general.ChangeDefaultCharTypeUnsigned>
+        <com.microchip.xc8.compiler.general.ChangeDefaultBitFieldUnsigned>True</com.microchip.xc8.compiler.general.ChangeDefaultBitFieldUnsigned>
+        <com.microchip.xc8.compiler.symbols.DefSymbols>
+          <ListValues>
+            <Value>(%24DeviceMacro)</Value>
+            <Value>DEBUG</Value>
+          </ListValues>
+        </com.microchip.xc8.compiler.symbols.DefSymbols>
+        <com.microchip.xc8.compiler.optimization.level>Optimize debugging experience (-Og)</com.microchip.xc8.compiler.optimization.level>
+        <com.microchip.xc8.compiler.optimization.PackStructureMembers>True</com.microchip.xc8.compiler.optimization.PackStructureMembers>
+        <com.microchip.xc8.compiler.optimization.AllocateBytesNeededForEnum>True</com.microchip.xc8.compiler.optimization.AllocateBytesNeededForEnum>
+        <com.microchip.xc8.compiler.optimization.DebugLevel>Default (-g2)</com.microchip.xc8.compiler.optimization.DebugLevel>
+        <com.microchip.xc8.compiler.warnings.AllWarnings>True</com.microchip.xc8.compiler.warnings.AllWarnings>
+        <com.microchip.xc8.linker.libraries.Libraries>
+          <ListValues>
+            <Value>libm</Value>
+          </ListValues>
+        </com.microchip.xc8.linker.libraries.Libraries>
+        <com.microchip.xc8.assembler.debugging.DebugLevel>Default (-Wa,-g)</com.microchip.xc8.assembler.debugging.DebugLevel>
+      </com.microchip.xc8>
+    </ToolchainSettings>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="kalman\cholesky.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="kalman\cholesky.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="kalman\compiler.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="kalman\kalman.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="kalman\kalman.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="kalman\kalman_example.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="kalman\kalman_example_gravity.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="kalman\kalman_example_gravity.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="kalman\kalman_factory_cleanup.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="kalman\kalman_factory_filter.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="kalman\kalman_factory_measurement.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="kalman\matrix.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="kalman\matrix.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="kalman\matrix_unittests.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="kalman\matrix_unittests.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="main.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="peripherals\clock\clkctrl.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="peripherals\clock\clkctrl.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="peripherals\data_streamer\data_streamer.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="peripherals\data_streamer\data_streamer.h">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="peripherals\usart\usart1.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="peripherals\usart\usart1.h">
+      <SubType>compile</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="kalman" />
+    <Folder Include="images" />
+    <Folder Include="peripherals" />
+    <Folder Include="peripherals\clock" />
+    <Folder Include="peripherals\data_streamer" />
+    <Folder Include="peripherals\usart" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="images\discrete_dynamic_eq1.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\discrete_dynamic_eq2.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\kalman_visualization.jpg">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\prediction_predicted_covariance.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\prediction_predicted_state.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\update_covariance.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\update_innovation.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\update_innovation_covariance.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\update_kalman_gain.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\update_post_fit_innovation.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\update_state_estimate.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\variable_A.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\variable_B.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\variable_k-1_timestep.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\variable_k.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\variable_P.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\variable_p_k_k-1.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\variable_Q.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\variable_uk.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\variable_wk.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\variable_xk-1_complete_estimate.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\variable_xk.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="images\variable_x_k_k-1_predicted.png">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="kalman\LICENSE.md">
+      <SubType>compile</SubType>
+    </None>
+    <None Include="README.md">
+      <SubType>compile</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(AVRSTUDIO_EXE_PATH)\\Vs\\Compiler.targets" />
+</Project>
