@@ -1,0 +1,54 @@
+{
+    "metaDataVersion": "1.0.0",
+    "category": "com.microchip.ide.project",
+    "content": {
+        "metaDataVersion": "1.3.0",
+        "name": "com.microchip.mcu8.studio.project.avr64ea48-digital-filters-studio",
+        "version": " ",
+        "displayName": "",
+        "projectName": "avr64ea48-digital-filters-studio",
+        "shortDescription": "Demo of digital filters (median, IIR, FFT and Kalman ) on AVR EA microcontroller using Microchip Studio",
+        "ide": {
+            "name": "STUDIO",
+            "semverRange": ">=7.0.2594"
+        },
+        "compiler": [
+            {
+                "name": "XC8",
+                "semverRange": "^2.40.0"
+            }
+        ],
+        "dfp": {
+            "name": "",
+            "semverRange": ""
+        },
+        "configurator": {
+            "name": "",
+            "semverRange": ""
+        },
+        "device": {
+            "metaDataVersion": "1.0.0",
+            "category": "com.microchip.portal.contentRef",
+            "content": {
+                "metaDataVersion": "1.0.0",
+                "category": "com.microchip.device",
+                "name": "AVR64EA48",
+                "versionRange": "*"
+            }
+        },
+        "author": "Prasad Aradhya",
+        "peripherals": [],
+        "keywords": [],
+        "additionalData": {
+            "longDescription": {
+                "metaDataVersion": "1.0.0",
+                "category": "com.microchip.portal.fileRef",
+                "content": {
+                    "metaDataVersion": "1.0.0",
+                    "fileName": "./README.md",
+                    "mimeType": "text/markdown"
+                }
+            }
+        }
+    }
+}

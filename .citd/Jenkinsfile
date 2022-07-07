@@ -1,0 +1,59 @@
+// Jenkinsfile v2.0.0
+
+pipeline {
+    agent {
+			label 'windows'
+    }
+    parameters {
+        string( name: 'NOTIFICATION_EMAIL',
+                defaultValue: 'PICAVR_Examples_GateKeepers@microchip.com',
+                description: "Email to send build failure and fixed notifications.")
+    }
+	
+	environment {
+		GITHUB_OWNER = 'microchip-pic-avr-examples'	
+		GITHUB_URL ='https://github.com/microchip-pic-avr-examples/avr64ea48-digital-filters-studio'
+		BITBUCKET_URL = 'https://bitbucket.microchip.com/scm/ebe/avr64ea48-digital-filters-studio.git'
+		SEMVER_REGEX = '^(0|[1-9]\\d*)+\\.(0|[1-9]\\d*)+\\.(0|[1-9]\\d*)+$'
+		ARTIFACTORY_SERVER = 'https://artifacts.microchip.com:7999/artifactory'
+	}	
+	options {
+		timestamps()
+		timeout(time: 30, unit: 'MINUTES')
+	}
+
+	stages {
+		stage('setup') {
+		    steps {
+				script {
+					execute("git clone https://bitbucket.microchip.com/scm/citd/mpae-buildpipeline-groovy-scripts.git")
+					def buildPipeline = load ('mpae-buildpipeline-groovy-scripts/studio-buildpipeline.groovy')
+					buildPipeline.runStages()
+				}
+            }
+		}
+	}
+	
+	post {
+        failure {			
+            script {			
+				sendPipelineFailureEmail()
+            }
+        }
+		always{
+			cleanWs()
+		}
+	}
+}
+def execute(String cmd) {
+	if(isUnix()) {
+		sh cmd
+	} else {
+		bat cmd
+	}
+}
+def sendPipelineFailureEmail() {			  
+    mail to: "${env.EMAILLIST},${params.NOTIFICATION_EMAIL}",
+    subject: "Failed Pipeline: ${currentBuild.fullDisplayName}",
+    body: "Pipeline failure. ${env.BUILD_URL}"
+}
