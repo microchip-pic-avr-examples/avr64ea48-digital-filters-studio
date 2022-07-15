@@ -4,8 +4,8 @@
     "content": {
         "metaDataVersion": "1.3.0",
         "name": "com.microchip.mcu8.studio.project.avr64ea48-digital-filters-studio",
-        "version": " ",
-        "displayName": "",
+        "version": "1.0.0",
+        "displayName": "Digital Filters using Microchip Studio",
         "projectName": "avr64ea48-digital-filters-studio",
         "shortDescription": "Demo of digital filters (median, IIR, FFT and Kalman ) on AVR EA microcontroller using Microchip Studio",
         "ide": {
@@ -15,7 +15,7 @@
         "compiler": [
             {
                 "name": "XC8",
-                "semverRange": "^2.40.0"
+                "semverRange": "^2.4.0"
             }
         ],
         "dfp": {
