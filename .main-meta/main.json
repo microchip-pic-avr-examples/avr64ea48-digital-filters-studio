@@ -19,12 +19,12 @@
             }
         ],
         "dfp": {
-            "name": "",
-            "semverRange": ""
+            "name": "AVR-Ex_DFP",
+            "semverRange": "2.2.56"
         },
         "configurator": {
-            "name": "",
-            "semverRange": ""
+            "name": "N/A",
+            "semverRange": " "
         },
         "device": {
             "metaDataVersion": "1.0.0",
@@ -38,7 +38,7 @@
         },
         "author": "Prasad Aradhya",
         "peripherals": [],
-        "keywords": [],
+        "keywords": ["Digital Filter"],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",
