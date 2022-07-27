@@ -32,7 +32,6 @@ The Kalman filter, also called linear quadratic estimation (LQE), is an algorith
 
 ## Software Used
 - [Microchip Studio IDE v7.0.2594](https://www.microchip.com/en-us/tools-resources/develop/microchip-studio) or newer
-- [MPLAB® Xpress IDE](https://www.microchip.com/xpress) (alternative to MPLAB X IDE)
 - [XC8 Compiler v2.40](https://www.microchip.com/en-us/tools-resources/develop/mplab-xc-compilers) or newer
 - [Microchip AVR64EA48 Device Support Pack AVR-Dx_DFP 2.2.56](https://packs.download.microchip.com/) or newer
 
@@ -43,7 +42,7 @@ The Kalman filter, also called linear quadratic estimation (LQE), is an algorith
 ## Setup
 
 <!-- Explain how to connect hardware and set up software. Depending on complexity, step-by-step instructions and/or tables and/or images can be used -->
-All code examples were created using an AVR64EA48 Curiosity Nano Evaluation Kit and the MPLAB X IDE. Refer to the AVR64EA48 Curiosity Nano Hardware User Guide for using the evaluation kit together with the IDE.
+All code examples were created using an AVR64EA48 Curiosity Nano Evaluation Kit and the Microchip Studio IDE. Refer to the AVR64EA48 Curiosity Nano Hardware User Guide for using the evaluation kit together with the IDE.
 
 ## Operation
 
@@ -52,6 +51,6 @@ Refer to the individual filter examples on how to configure and use the filters.
 
 
 ## Summary
-After going through these use cases, you should better understand how to use the mentioned filters in an AVR context. This includes how this can be used together with the MPLAB® Code Configurator called Melody and also measuring the speed of the filters.
+After going through these use cases, you should better understand how to use the mentioned filters in an AVR context. This includes how to measure the speed of the filters.
 
 
