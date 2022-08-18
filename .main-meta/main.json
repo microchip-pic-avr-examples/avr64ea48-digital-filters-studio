@@ -20,7 +20,7 @@
         ],
         "dfp": {
             "name": "AVR-Ex_DFP",
-            "semverRange": "2.2.56"
+            "semverRange": "^2.2.56"
         },
         "configurator": {
             "name": "N/A",
@@ -36,8 +36,8 @@
                 "versionRange": "*"
             }
         },
-        "author": "Prasad Aradhya",
-        "peripherals": [],
+        "author": "Bjørnar Moe Remmen, Lloyd Clark, Martin Thomaz, Phillip Olk and Martin Mostad",
+        "peripherals": ["USART"],
         "keywords": ["Digital Filter"],
         "additionalData": {
             "longDescription": {
