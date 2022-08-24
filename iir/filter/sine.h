@@ -2,7 +2,7 @@
  * sine.h
  *
  * Created: 13.01.2022 13:36:38
- *  Author: M53740
+ *  Author: Microchip Technology
  */ 
 
 

@@ -1,5 +1,5 @@
 /*
-© [2022] Microchip Technology Inc. and its subsidiaries.
+ï¿½ [2022] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip
     software and any derivatives exclusively with Microchip products.
@@ -36,7 +36,8 @@ int main(void)
 {
     clkctrl_init();
     USART1_Initialize();
-	
+	PORTD.DIRSET = PIN6_bm;
+    
     volatile uint16_t original = 0;
     volatile uint16_t filtered = 0;
     uint8_t i = 0;

@@ -2,7 +2,7 @@
  * main.c
  *
  * Created: 7/5/2022 9:48:26 AM
- *  Author: M53740
+ *  Author: Microchip Technology
  */ 
 
 #include <xc.h>
@@ -19,6 +19,7 @@ int main(void)
 {
 	clkctrl_init();
 	USART1_Initialize();
+	PORTD.DIRSET = PIN6_bm;
 	volatile int nfft = 512;
 	volatile int out = (nfft/2)+1;
 	

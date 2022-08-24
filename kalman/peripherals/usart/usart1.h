@@ -2,7 +2,7 @@
  * usart1.h
  *
  * Created: 05.07.2022 10:32:42
- *  Author: M53740
+ *  Author: Microchip Technology
  */ 
 
 

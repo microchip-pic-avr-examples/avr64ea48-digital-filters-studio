@@ -2,7 +2,7 @@
  * data_streamer.h
  *
  * Created: 05.07.2022 10:39:27
- *  Author: M53740
+ *  Author: Microchip Technology
  */ 
 
 
@@ -21,7 +21,7 @@
 */
 
 /*
-© [2022] Microchip Technology Inc. and its subsidiaries.
+ï¿½ [2022] Microchip Technology Inc. and its subsidiaries.
 
     Subject to your compliance with these terms, you may use Microchip 
     software and any derivatives exclusively with Microchip products. 

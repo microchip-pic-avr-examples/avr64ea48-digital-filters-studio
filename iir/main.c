@@ -2,10 +2,8 @@
  * main.c
  *
  * Created: 7/5/2022 2:06:01 PM
- *  Author: M53740
+ *  Author: Microchip Technology
  */ 
-
-#include <xc.h>
 
  /*
  * MAIN Generated Driver File
@@ -56,6 +54,7 @@ int main(void)
 {    
 	clkctrl_init();
 	USART1_Initialize();
+    PORTD.DIRSET = PIN6_bm;
     
     smp_type dbGain = 1.0;
     smp_type freq;
@@ -108,6 +107,6 @@ int main(void)
 			PORTD.OUTCLR = PIN6_bm; // Make PD6 output logic low
         
         }
-		PORTD.DIRCLR = PIN6_bm;
+		
     }    
 }

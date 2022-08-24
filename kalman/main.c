@@ -2,7 +2,7 @@
  * main.c
  *
  * Created: 7/6/2022 1:38:48 PM
- *  Author: M53740
+ *  Author: Microchip Technology
  */ 
 
 #include <xc.h>
