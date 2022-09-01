@@ -7,7 +7,7 @@
         "version": "1.0.0",
         "displayName": "Digital Filters using Microchip Studio",
         "projectName": "avr64ea48-digital-filters-studio",
-        "shortDescription": "Demo of digital filters (median, IIR, FFT and Kalman ) on AVR EA microcontroller using Microchip Studio",
+        "shortDescription": "Demo of digital filters (median, IIR, FFT and Kalman) on AVR EA microcontroller using Microchip Studio",
         "ide": {
             "name": "STUDIO",
             "semverRange": ">=7.0.2594"
@@ -38,7 +38,7 @@
         },
         "author": "Bjørnar Moe Remmen, Lloyd Clark, Martin Thomaz, Phillip Olk and Martin Mostad",
         "peripherals": ["USART"],
-        "keywords": ["Digital Filter"],
+        "keywords": ["Digital Filter, Filter, Signal Processing"],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",

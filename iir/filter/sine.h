@@ -2,8 +2,7 @@
  * sine.h
  *
  * Created: 13.01.2022 13:36:38
- *  Author: Microchip Technology
- */ 
+  */ 
 
 
 #ifndef SINE_H_

@@ -1,7 +1,6 @@
 /* 
  * File:   biquad.c
- * Author: Microchip Technology
- *
+  *
  * Created on 20. juli 2021, 10:03
  */
 

@@ -58,3 +58,6 @@ for(i = 0; i < medianFilter->numNodes - 1; i++)
 We have shown briefly how a median filter works and how to use it. We also demonstrated how to measure the cycle times for your application using an oscilloscope or logic analyzer.
 
 A median filter is a nice method for removing noise or peaks from the signal and can often be used as a preprocessing step in front of more advanced filters, like a Kalman filter. The difference between a Median filter and more advanced filters is that a Median filter does not fold the extreme values into the signal like in an average filter and therefore removes their impact on the signal.
+
+## Sources
+-  https://github.com/accabog/MedianFilter

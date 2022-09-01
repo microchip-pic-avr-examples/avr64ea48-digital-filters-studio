@@ -1,4 +1,4 @@
-# EKF on AVR
+# Extended (Nonlinear) Kalman Filter on AVR
 This repository contains the kalman-clib library implemented on an AVR64EA48. The original library can be found at https://github.com/sunsided/kalman-clib.
 
 Refer to the [Microchip Application Note AN4515: "Processing Analog Sensor Data with Digital Filtering"](https://ww1.microchip.com/downloads/en/Appnotes/ProcessAnalogSensorDataDigitalFiltering-DS00004515.pdf) for further details on the principle of the Kalman filter. The filter equations are introduced further down in this document as well.
@@ -43,7 +43,7 @@ The kalman_example file is not a full example, but just shows how to use the Kal
 ## Results
 
 ### Memory
-Running the above example uses 12.k Kb of program memory and about 640 b of Data memory on an AVR64EA48. It should be noted that the example contains some pre-loaded data to run the example that increases the memory so the library itself is probably a bit smaller. 
+Running the above example uses slightly more than 12 kB of program memory and about 640 B of Data memory on an AVR64EA48. It should be noted that the example contains some pre-loaded data to run the example that increases the memory so the library itself is probably a bit smaller. 
 
 ### Cycles
 
@@ -51,7 +51,7 @@ Running the above example uses 12.k Kb of program memory and about 640 b of Data
 |---------------|-----------|-------------------------|-------------------|
 |A=3x3, B= null | `float`   | 1784                    | 40166             | 
 
-To be able to measure the speed of the Kalman filter, connect an oscilloscope or a logic analyzer to PORT D - PIN 6 and measure the time when the pin is high.
+To be able to measure the speed of the Kalman filter, connect an oscilloscope or a logic analyzer to PORT D - PIN 6 and measure the time when the pin is high. Divide that time measurement by the clock period to obtain the number of cycles.
 
 ## Limitations 
 The repo has the following limitations
