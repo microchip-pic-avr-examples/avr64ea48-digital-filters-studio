@@ -38,7 +38,7 @@
         },
         "author": "Bjørnar Moe Remmen, Lloyd Clark, Martin Thomaz, Phillip Olk and Martin Mostad",
         "peripherals": ["USART"],
-        "keywords": ["Digital Filter, Filter, Signal Processing"],
+        "keywords": ["Digital Filter"],
         "additionalData": {
             "longDescription": {
                 "metaDataVersion": "1.0.0",
